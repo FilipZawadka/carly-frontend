@@ -73,7 +73,7 @@ class PageEmployeeCreate extends React.Component {
 
         this.props.employeesAdded(employee); //already added this
         this.props.history.push("/");
-        
+
       }
     })  
   }
@@ -105,7 +105,8 @@ class PageEmployeeCreate extends React.Component {
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
     employees: state.employees,
-    newemployee: state.newemployee
+    newemployee: state.newemployee,
+    loaded: state.loaded
   }
 }
 

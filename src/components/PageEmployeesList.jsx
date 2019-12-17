@@ -17,6 +17,7 @@ class PageEmployeesList extends React.Component {
   }
 
   componentDidMount() {
+    if(!this.props.loaded){
     this.setState({ isLoading: true });
     fetch('http://localhost:3004/employees')
     .then((data) => data.json())
@@ -27,6 +28,7 @@ class PageEmployeesList extends React.Component {
       this.props.employeesLoaded(employees);
       this.setState({ isLoading: false });
     });
+  }
   }
 
   render() {
@@ -51,7 +53,9 @@ class PageEmployeesList extends React.Component {
 
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
-    employees: state.employees
+    employees: state.employees,
+    newemployee: state.newemployee,
+    loaded: state.loaded
   }
 }
 
