@@ -70,8 +70,10 @@ class PageEmployeeCreate extends React.Component {
       if(res.status !== 201) {
         this.setState({ isSaving: false, error: `Saving returned status ${res.status}`})
       } else {
-        this.props.employeesAdded(employee);
+
+        this.props.employeesAdded(employee); //already added this
         this.props.history.push("/");
+        
       }
     })  
   }
@@ -102,7 +104,8 @@ class PageEmployeeCreate extends React.Component {
 
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
-    employees: state.employees
+    employees: state.employees,
+    newemployee: state.newemployee
   }
 }
 
