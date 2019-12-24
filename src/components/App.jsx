@@ -6,15 +6,17 @@ import {
 } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from '../redux/reducers'
+//import { createStore } from 'redux'
+//import { composeWithDevTools } from 'redux-devtools-extension'
+//import rootReducer from '../redux/reducers'
 
 
 import PageEmployeesList from './PageEmployeesList';
 import PageEmployeeCreate from './PageEmployeeCreate';
 
-const store = createStore(rootReducer, {}, composeWithDevTools())
+//const store = createStore(rootReducer, {}, composeWithDevTools())
+
+import store from './store';
 
 const App = () => (
   <Provider store={store}>

@@ -106,7 +106,9 @@ const mapStateToProps = (state /*, ownProps*/) => {
   return {
     employees: state.employees,
     newemployee: state.newemployee,
-    loaded: state.loaded
+    loaded: state.loaded,
+    loading: state.loading,
+    error: state.error
   }
 }
 
