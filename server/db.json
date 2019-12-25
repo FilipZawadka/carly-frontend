@@ -243,5 +243,12 @@
       "company": "Mr",
       "email": "filip.zawadka@hotmail.com"
     }
+  ],
+  "users": [
+    {
+    "username":"john",
+    "full_name": "John Doe"
+    }
+
   ]
 }
