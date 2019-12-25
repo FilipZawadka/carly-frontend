@@ -13,6 +13,8 @@ import { Provider } from 'react-redux'
 
 import PageEmployeesList from './PageEmployeesList';
 import PageEmployeeCreate from './PageEmployeeCreate';
+import PageLogin from './PageLogin';
+
 
 //const store = createStore(rootReducer, {}, composeWithDevTools())
 
@@ -23,10 +25,13 @@ const App = () => (
     <Router>
       <Switch>
         <Route exact path="/">
-          <PageEmployeesList></PageEmployeesList>
+          <PageLogin></PageLogin>
         </Route>
         <Route exact path="/new">
           <PageEmployeeCreate></PageEmployeeCreate>
+        </Route>
+        <Route exact path="/list">
+         <PageEmployeesList></PageEmployeesList>
         </Route>
       </Switch>
     </Router>
