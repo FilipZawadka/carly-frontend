@@ -1,4 +1,29 @@
-import { EMPLOYEES_LOADED, EMPLOYEES_ADDED,EMPLOYEES_LOADING,EMPLOYEES_LOADING_ERROR } from './constants';
+import { EMPLOYEES_LOADED, EMPLOYEES_ADDED,EMPLOYEES_LOADING,EMPLOYEES_LOADING_ERROR,USERES_LOADED,USER_SAVE} from './constants';
+
+export const fetchUsers = () => dispatch => {
+  return fetch("http://localhost:3004/users")
+    .then(data => data.json())
+    .then(
+      users => dispatch(usersLoaded(users))
+    );
+  };
+      
+export const usersLoaded = (users) => {
+    return {
+      type: USERES_LOADED,
+      payload: {
+        users
+      }
+    };
+  }
+  export const userSave = (fullname) => {
+    return {
+      type: USER_SAVE,
+      payload: {
+        fullname
+      }
+    };
+  }
 
 export const employeesLoading = (employees)=> {
   return {
@@ -39,7 +64,6 @@ dispatch(employeesLoading());
 return fetch("http://localhost:3004/employees")
   .then(data => data.json())
   .then(
-    
     employees => dispatch(employeesLoaded(employees)),
     error => dispatch(employeesLoadingError(error))
   );

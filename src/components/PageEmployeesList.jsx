@@ -12,7 +12,7 @@ class PageEmployeesList extends React.Component {
     super(props);
 
     this.state = { 
-      isLoading: false,
+      isLoading: false    
     }
   }
 
@@ -35,7 +35,7 @@ class PageEmployeesList extends React.Component {
 
   render() {
     const { isLoading } = this.state;
-    const { employees } = this.props;
+    const { employees,fullname} = this.props;
 
     if(isLoading) {
       return <p>Loading ...</p>
@@ -43,8 +43,10 @@ class PageEmployeesList extends React.Component {
     
     return (
       <div>
+        
         <h1>Employees List:</h1>
-        {employees && employees.map((employee => <EmployeeLine key={employee._id} employee={employee} />))}
+        <h2 align="right">{fullname}</h2>
+        <div>{employees && employees.map((employee => <EmployeeLine key={employee.id} employee={employee} />))}</div>
         <Link to="/new">
           <button>Create employee</button>
         </Link>
@@ -59,7 +61,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
     newemployee: state.newemployee,
     loaded: state.loaded,
     loading:state.loading,
-    error:state.error
+    error:state.error,
+    fullname:state.fullname
   }
 }
 const mapDispatchToProps = (dispatch) => ({
