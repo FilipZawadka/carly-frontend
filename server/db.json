@@ -1,5 +1,5 @@
 {
-  "employees": [
+  "users": [
     {
       "id": "5dc9bdc63d783442fbd22b38",
       "isActive": true,
@@ -153,11 +153,82 @@
       "email": "rosannanewman@exiand.com"
     }
   ],
-  "users": [
+  "cars": [
     {
-    "username":"john",
-    "full_name": "John Doe"
+      "id": 1,
+      "registration_number": "NOP34323sd",
+      "brand": "Mazda",
+      "model": "MX-5 RF",
+      "location": "Warsaw",
+      "renting_company": "Tesla guys",
+      "price": "300",
+      "year_of_production": 2012
+    },
+    {
+      "id": 1579162069202,
+      "registration_number": "MOP34323sd",
+      "brand": "Tesla",
+      "model": "S",
+      "location": "Cracow",
+      "renting_company": "Tesla guys",
+      "price": 250,
+      "year_of_production": 2015
+    },
+    {
+      "id": 1580839591867,
+      "registration_number": "KOP34323sd",
+      "brand": "Tesla",
+      "model": "X",
+      "location": "Warsaw",
+      "renting_company": "Tesla guys",
+      "price": 240,
+      "year_of_production": 2018
+    },
+    {
+      "id": 1580920693906,
+      "registration_number": "SOP34323sd",
+      "brand": "Mazda",
+      "model": "MX-5 RF",
+      "location": "Cracow",
+      "renting_company": "Best Buy",
+      "price": 220,
+      "year_of_production": 2010
     }
-
+  ],
+  "dates": [
+    {
+      "id": "1",
+      "start_date": "2020-03-01",
+      "end_date": "2020-04-05",
+      "car_id": 1,
+      "user_id": "5dc9bdc63d783442fbd22b38"
+    },
+    {
+      "id": "1",
+      "start_date": "2020-03-01",
+      "end_date": "2020-04-05",
+      "car_id": 1,
+      "user_id": "5dc9bdc65720bf0a00dc0ca4"
+    }
+  ],
+  "admins": [
+    {
+      "admin_id": 1,
+      "username": "john",
+      "password": "kot",
+      "full_name": "John Doe"
+    },
+    {
+      "admin_id": 2,
+      "username": "tom",
+      "password": "pies",
+      "full_name": "Tom Ziom"
+    },
+    {
+      "admin_id": 3,
+      "username": "ala",
+      "password": "kotek",
+      "full_name": "Ala Makota"
+    }
   ]
 }

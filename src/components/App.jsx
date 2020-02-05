@@ -6,32 +6,26 @@ import {
 } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
-//import { createStore } from 'redux'
-//import { composeWithDevTools } from 'redux-devtools-extension'
-//import rootReducer from '../redux/reducers'
 
-
-import PageEmployeesList from './PageEmployeesList';
-import PageEmployeeCreate from './PageEmployeeCreate';
+import PageCarsList from './PageCarsList';
 import PageLogin from './PageLogin';
-
-
-//const store = createStore(rootReducer, {}, composeWithDevTools())
+import PageCalendar from './PageCalendar';
 
 import store from './store';
 
+
 const App = () => (
-  <Provider store={store}>
+  <Provider id="App" store={store}>
     <Router>
       <Switch>
         <Route exact path="/">
           <PageLogin></PageLogin>
         </Route>
-        <Route exact path="/new">
-          <PageEmployeeCreate></PageEmployeeCreate>
-        </Route>
         <Route exact path="/list">
-         <PageEmployeesList></PageEmployeesList>
+         <PageCarsList></PageCarsList>
+        </Route>
+        <Route exact path="/calendar">
+          <PageCalendar></PageCalendar>
         </Route>
       </Switch>
     </Router>
